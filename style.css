@@ -1,44 +1,44 @@
-body {
-  background-color: #888;
+html {
+  background: #100a1c;
+  background-image:
+    radial-gradient(50% 30% ellipse at center top, #201e40 0%, rgba(0,0,0,0) 100%),
+    radial-gradient(60% 50% ellipse at center bottom, #261226 0%, #100a1c 100%);
+  background-attachment: fixed;
+  color: #6cacc5;
 }
 
-table {
-  margin: auto;
-  background-color: #222;
-  width: 295px;
-  max-width: 295px;
-  height: 325px;
-  text-align: center;
-  border-radius: 4px;
-  padding-right: 10px;
+.calculator_keys {
+  font-size: 28px;
+  margin: 0 auto;
+  width: 10em;
 }
 
-input {
-  outline: 0;
-  position: relative;
-  left: 5px;
-  top: 5px;
+button {
   border: 0;
-  color: #495069;
-  background-color: #fff;
-  border-radius: 4px;
-  width: 60px;
-  height: 50px;
+  background: rgba(42,50,113, .28);
+  color: #6cacc5;
+  cursor: pointer;
   float: left;
-  margin: 5px;
-  font-size: 20px;
-  box-shadow: 0 4px rgba(0,0,0,0.2);
-  margin-bottom: 15px;
+  font: inherit;
+  margin: 0.25em;
+  width: 2em;
+  height: 2em;
+  transition: all 0.5s;
 }
 
-#display {
-  width: 265px;
-  max-width: 270px;
-  font-size: 26px;
-  text-align: right;
-  background-color: #bcbd95;
+.viewer {
+  color: #c97874;
   float: left;
-} 
+  line-height: 3em;
+  text-align: right;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 7.5em;
+  height: 3em;
+}
 
-
-
+.ops:focus::after {
+  content: attr(data-ops);
+  margin-left: -210px;
+  width: 420px;
+}
