@@ -28,29 +28,19 @@ function operate(operation, a, b) {
     }
 }
 
-//event listeners on numbers
-
-let numberButtons = document.getElementsByClassName("numberButton");
-
-for (let i=0; i<numberButtons.length; i++){
-    numberButtons[i].addEventListener(
-        "click", 
-        function(){
-        setNumbers(numberButtons[i].id);
-        }
-    );
+// listen for clicks on numbers
+let numbers = document.getElementsByClassName("numbers");
+for(var i = 0; i < numbers.length; i++) {
+    numbers[i].addEventListener('click', function(e) {
+        console.log('number clicked');
+    });
 }
 
-//event listeners on operators
-
-let operators = document.getElementsByClassName("operator");
-
-for(let i = 0; i < operators.length; i++) {
-    operators[i].addEventListener(
-        "click",
-        function() {
-            
-        }
-    )
+let operators = document.getElementsByClassName("ops");
+for(var i = 0; i < operators.length; i++) {
+    operators[i].addEventListener('click', function(e) {
+        console.log("operator clicked");
+    });
 }
+
 
